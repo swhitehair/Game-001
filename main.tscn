@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcjqlsginaa3t"]
+
+[ext_resource type="PackedScene" uid="uid://y32h0wo8wevw" path="res://kfc.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cwrk7twsx7sox" path="res://player.tscn" id="2_h2yge"]
+
+[node name="main" type="Node2D"]
+
+[node name="KFC" parent="." instance=ExtResource("1_0xm2m")]
+position = Vector2(492, 158)
+scale = Vector2(4, 4)
+
+[node name="player" parent="." instance=ExtResource("2_h2yge")]
+position = Vector2(137, 153)
+scale = Vector2(4, 4)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(2, 2)
+metadata/_edit_lock_ = true
