@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcjqlsginaa3t"]
+[gd_scene load_steps=4 format=3 uid="uid://bcjqlsginaa3t"]
 
 [ext_resource type="PackedScene" uid="uid://y32h0wo8wevw" path="res://kfc.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://0oyolgdufcgk" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cwrk7twsx7sox" path="res://player.tscn" id="2_h2yge"]
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_h2yge")
 
 [node name="KFC" parent="." instance=ExtResource("1_0xm2m")]
 position = Vector2(492, 158)
