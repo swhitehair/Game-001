@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://y32h0wo8wevw"]
+[gd_scene load_steps=7 format=3 uid="uid://y32h0wo8wevw"]
 
+[ext_resource type="Script" uid="uid://dyvl67pp0aqae" path="res://kfc.gd" id="1_ljnmi"]
 [ext_resource type="Texture2D" uid="uid://bcw8if0k84n3j" path="res://KFC.png" id="1_p44ug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljnmi"]
@@ -14,6 +15,7 @@ size = Vector2(34.84375, 68)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p44ug"]
 
 [node name="KFC" type="StaticBody2D"]
+script = ExtResource("1_ljnmi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_p44ug")
@@ -31,7 +33,10 @@ position = Vector2(14.578125, 1)
 shape = SubResource("RectangleShape2D_q0hgh")
 
 [node name="door_entrance" type="Area2D" parent="."]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door_entrance"]
 position = Vector2(-13, 25)
 shape = SubResource("RectangleShape2D_p44ug")
+
+[connection signal="body_entered" from="door_entrance" to="." method="_on_door_entrance_body_entered"]
